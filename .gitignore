@@ -2,7 +2,6 @@
 Thumbs.db
 
 node_modules
-dist
 
 *.orig
 *.log
