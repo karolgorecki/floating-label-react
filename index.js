@@ -119,6 +119,7 @@ class FloatingLabel extends React.Component {
           step={this.props.step}
           style={inputStyle}
           type={this.props.type}
+          ref={this.props.getRef}
         />
       </label>
     );
@@ -131,6 +132,7 @@ FloatingLabel.propTypes = {
   autoFocus: PropTypes.bool,
   disabled: PropTypes.bool,
   element: PropTypes.oneOf(["input", "textarea"]),
+  getRef: PropTypes.func,
   id: PropTypes.string.isRequired,
   inputMode: PropTypes.string,
   max: PropTypes.number,
@@ -166,7 +168,8 @@ FloatingLabel.defaultProps = {
   step: 1,
   styles: {},
   type: "text",
-  value: ""
+  value: "",
+  getRef: () => { },
 };
 
 export default FloatingLabel;
